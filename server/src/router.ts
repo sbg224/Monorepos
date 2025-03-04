@@ -23,6 +23,11 @@ router.get("/api/programs", programActions.browse);
 import sayActions from "./modules/say/sayActions";
 router.get("/", sayActions.sayWelcome);
 
+import categories from "./modules/categories/categoryActions";
+
+router.get("/api/category", categories.browse);
+router.get("/api/category/:id", categories.read);
+
 /* ************************************************************************* */
 
 export default router;
